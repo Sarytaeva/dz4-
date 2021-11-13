@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
@@ -34,7 +35,8 @@ public class Main {
         listC.add(listA.get (4));
         listC.add(listB.get (0));
         System.out.println(listC);
-        Collections.sort(listC);
+        listC.sort(Comparator.comparing(String::length));
+        Collections.reverse(listC);
         System.out.println(listC);
 
 
